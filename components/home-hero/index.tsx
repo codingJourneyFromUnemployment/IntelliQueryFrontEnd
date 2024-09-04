@@ -22,6 +22,7 @@ export default function HomeHero() {
     intentCategory,
     setIntentCategory,
     jwtToken,
+    setCurrentQueryId,
     setJwtToken,
   } = useStore();
   const [parsedQuickResults, setParsedQuickResults] = useState("");
@@ -126,6 +127,9 @@ export default function HomeHero() {
 
       setIntentCategory(intentCategory);
       setJwtToken(jwtToken);
+      console.log("setJwtToken", jwtToken);
+      setCurrentQueryId(id);
+      console.log("setCurrentQueryId", id);
       
       localStorage.setItem("intentCategory", intentCategory);
       localStorage.setItem("jwtToken", jwtToken);
